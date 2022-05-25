@@ -4,10 +4,7 @@ const Box = ({ className = '' }) => {
   return (
     <View className={['rounded-xl', className]}>
       <View className='h-34 mb-1'>
-        <Image
-          className='w-full h-full object-cover rounded-xl'
-          source='https://wallpaperaccess.com/full/2309745.jpg'
-        />
+        <Image className='w-full h-full rounded-xl' source={{ uri: 'https://wallpaperaccess.com/full/2309745.jpg' }} />
       </View>
       <View className='flex-row items-center justify-between'>
         <View className='justify-between'>
@@ -18,8 +15,8 @@ const Box = ({ className = '' }) => {
           {Array.from(Array(5)).map((item, index) => (
             <Image
               key={index}
-              className='h-8 w-8 -ml-4 rounded-full border-2 border-white object-cover'
-              source='https://wallpaperaccess.com/full/2309745.jpg'
+              className='h-8 w-8 -ml-4 rounded-full border-2 border-white'
+              source={{ uri: 'https://wallpaperaccess.com/full/2309745.jpg' }}
             />
           ))}
           <View className='-ml-4'>

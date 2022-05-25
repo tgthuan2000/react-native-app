@@ -6,7 +6,7 @@ const Eye = () => {
     <View className='flex-1 bg-white p-2'>
       <ScrollView>
         {Array.from(Array(20)).map((item, index) => (
-          <SmallCard className={index !== 20 && 'mb-4'} />
+          <SmallCard key={index} className={index !== 20 && 'mb-4'} />
         ))}
       </ScrollView>
     </View>
