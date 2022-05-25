@@ -18,6 +18,7 @@ const App = () => {
   return (
     <NavigationContainer>
       <Tab.Navigator
+        initialRouteName='Home'
         screenOptions={{
           headerShown: false,
           tabBarShowLabel: false,
