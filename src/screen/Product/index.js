@@ -1,7 +1,7 @@
 import { ScrollView } from 'react-native'
 import { Box, View } from '~/components'
 
-const Home = () => {
+const Product = () => {
   return (
     <View className='flex-1 bg-white p-2'>
       <ScrollView>
@@ -13,4 +13,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Product

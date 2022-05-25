@@ -1,1 +1,5 @@
 export { default as Home } from './Home'
+export { default as Product } from './Product'
+export { default as Settings } from './Settings'
+export { default as Eye } from './Eye'
+export { default as Figma } from './Figma'
