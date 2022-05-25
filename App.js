@@ -1,4 +1,3 @@
-import 'dotenv/config'
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs'
 import { NavigationContainer } from '@react-navigation/native'
 import { Home } from './src/screen'

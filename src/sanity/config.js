@@ -1,12 +1,12 @@
 import sanityClient from '@sanity/client'
 import ImageUrlBuilder from '@sanity/image-url'
-import 'dotenv/config'
 
 const client = sanityClient({
-  projectId: process.env.SANITY_PROJECT_ID,
+  projectId: 'g7l2ck33',
   dataset: 'production',
-  apiVersion: process.env.SANITY_VERSION_API,
-  token: process.env.SANITY_API_TOKEN,
+  apiVersion: '2021-10-21',
+  token:
+    'sk95Pg46sU76QlG1hnmSUSOo5rtVzbTQvVCufsGQIs1pyGaD5JZBCMRl16ML3LYDgZFTbDZqrwP1z0GhZQFVnb23jlD7wFSCVVJHx8gxnWYfYrHXKXAFfspxQqnNM58unL6mIm0FXv0Y017y70WrFHtxMIIexMCnTuChCyBZd10zHqSIHxr2',
   useCdn: false,
 })
 
