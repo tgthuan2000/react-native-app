@@ -5,7 +5,7 @@ import tw from '~/lib/tailwind'
 const Settings = () => {
   return (
     <View style={tw('flex-1 bg-white p-2')}>
-      <ScrollView style={tw('mt-5')}>
+      <ScrollView style={tw('mt-7')} showsVerticalScrollIndicator={false} showsHorizontalScrollIndicator={false}>
         <View style={tw('flex-row flex-wrap')}>
           {Array.from(Array(7)).map((item, index) => (
             <View key={index} style={tw('w-1/2')}>

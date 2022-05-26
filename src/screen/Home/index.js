@@ -5,7 +5,7 @@ import tw from '~/lib/tailwind'
 const Home = () => {
   return (
     <View style={tw('flex-1 bg-white p-2')}>
-      <ScrollView style={tw('mt-5')}>
+      <ScrollView style={tw('mt-7')} showsVerticalScrollIndicator={false} showsHorizontalScrollIndicator={false}>
         <ImageBox className='mb-2' />
         <View style={tw('flex-row')}>
           <ImageBox className='flex-1 mr-1 mb-2' />
