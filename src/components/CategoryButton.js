@@ -1,14 +1,15 @@
 import { Feather } from '@expo/vector-icons'
-import { View, Text } from '.'
+import tw from '~/lib/tailwind'
+import { View, Text } from 'react-native'
 
 const CategoryButton = ({ className = '' }) => {
   return (
-    <View className={['flex-row p-2 bg-slate-200 rounded-lg items-center', className]}>
-      <View className='rounded-lg p-1 bg-yellow-400'>
+    <View style={tw.style('flex-row p-2 bg-slate-200 rounded-lg items-center', className)}>
+      <View style={tw.style('rounded-lg p-1 bg-yellow-400')}>
         <Feather name='eye' size={18} color='white' />
       </View>
-      <View className='ml-2'>
-        <Text className='text-gray-500 text-sm font-mont-medium capitalize'>Champagne</Text>
+      <View style={tw.style('ml-2')}>
+        <Text style={tw.style('text-gray-500 text-sm font-mont-medium capitalize')}>Champagne</Text>
       </View>
     </View>
   )

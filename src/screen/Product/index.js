@@ -1,9 +1,10 @@
-import { ScrollView } from 'react-native'
-import { Box, View } from '~/components'
+import { ScrollView, View } from 'react-native'
+import { Box } from '~/components'
+import tw from '~/lib/tailwind'
 
 const Product = () => {
   return (
-    <View className='flex-1 bg-white p-2'>
+    <View style={tw.style('flex-1 bg-white p-2')}>
       <ScrollView>
         {Array.from(Array(10)).map((value, index) => (
           <Box key={index} className={index !== 10 && 'mb-2'} />

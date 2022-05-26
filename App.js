@@ -1,7 +1,6 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { NavigationContainer } from '@react-navigation/native'
 import { Feather } from '@expo/vector-icons'
-import { View } from '~/components'
 import { Eye, Figma, Home, Product, Settings } from '~/screen'
 import {
   useFonts,
@@ -63,7 +62,7 @@ const App = () => {
   return (
     <NavigationContainer>
       <Tab.Navigator
-        initialRouteName='Home'
+        initialRouteName='Eye'
         screenOptions={{
           headerShown: false,
           tabBarShowLabel: false,
@@ -86,11 +85,7 @@ const App = () => {
             component={Component}
             options={{
               tabBarIcon: ({ focused }) => {
-                return (
-                  <View>
-                    <Feather name={icon} size={24} color={focused ? '#FF3355' : '#6B7280'} />
-                  </View>
-                )
+                return <Feather name={icon} size={24} color={focused ? '#FF3355' : '#6B7280'} />
               },
             }}
           />
