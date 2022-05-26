@@ -8,7 +8,7 @@ const CategoryButton = ({ className = '' }) => {
         <Feather name='eye' size={18} color='white' />
       </View>
       <View className='ml-2'>
-        <Text className='text-gray-500 text-sm font-medium capitalize'>Champagne</Text>
+        <Text className='text-gray-500 text-sm font-mont-medium capitalize'>Champagne</Text>
       </View>
     </View>
   )

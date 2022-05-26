@@ -8,8 +8,8 @@ const Box = ({ className = '' }) => {
       </View>
       <View className='flex-row items-center justify-between'>
         <View className='justify-between'>
-          <Text className='text-gray-900 font-bold text-base'>Eastern Standard</Text>
-          <Text className='text-gray-400 text-xs font-medium'>228 Park Ave S.NewYork</Text>
+          <Text className='text-gray-900 font-mont-semiBold text-base'>Eastern Standard</Text>
+          <Text className='text-gray-400 text-xs font-mont-medium'>228 Park Ave S.NewYork</Text>
         </View>
         <View className='flex-row items-center'>
           {Array.from(Array(5)).map((item, index) => (

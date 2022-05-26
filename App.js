@@ -3,6 +3,28 @@ import { NavigationContainer } from '@react-navigation/native'
 import { Feather } from '@expo/vector-icons'
 import { View } from '~/components'
 import { Eye, Figma, Home, Product, Settings } from '~/screen'
+import {
+  useFonts,
+  Montserrat_100Thin,
+  Montserrat_200ExtraLight,
+  Montserrat_300Light,
+  Montserrat_400Regular,
+  Montserrat_500Medium,
+  Montserrat_600SemiBold,
+  Montserrat_700Bold,
+  Montserrat_800ExtraBold,
+  Montserrat_900Black,
+  Montserrat_100Thin_Italic,
+  Montserrat_200ExtraLight_Italic,
+  Montserrat_300Light_Italic,
+  Montserrat_400Regular_Italic,
+  Montserrat_500Medium_Italic,
+  Montserrat_600SemiBold_Italic,
+  Montserrat_700Bold_Italic,
+  Montserrat_800ExtraBold_Italic,
+  Montserrat_900Black_Italic,
+} from '@expo-google-fonts/montserrat'
+import AppLoading from 'expo-app-loading'
 
 const tabScreens = [
   { name: 'Home', Component: Home, icon: 'home' },
@@ -15,6 +37,29 @@ const tabScreens = [
 const Tab = createBottomTabNavigator()
 
 const App = () => {
+  const [loadedFonts] = useFonts({
+    Montserrat_100Thin,
+    Montserrat_200ExtraLight,
+    Montserrat_300Light,
+    Montserrat_400Regular,
+    Montserrat_500Medium,
+    Montserrat_600SemiBold,
+    Montserrat_700Bold,
+    Montserrat_800ExtraBold,
+    Montserrat_900Black,
+    Montserrat_100Thin_Italic,
+    Montserrat_200ExtraLight_Italic,
+    Montserrat_300Light_Italic,
+    Montserrat_400Regular_Italic,
+    Montserrat_500Medium_Italic,
+    Montserrat_600SemiBold_Italic,
+    Montserrat_700Bold_Italic,
+    Montserrat_800ExtraBold_Italic,
+    Montserrat_900Black_Italic,
+  })
+
+  if (!loadedFonts) return <AppLoading />
+
   return (
     <NavigationContainer>
       <Tab.Navigator
@@ -54,4 +99,5 @@ const App = () => {
     </NavigationContainer>
   )
 }
+
 export default App
