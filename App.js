@@ -2,6 +2,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { NavigationContainer } from '@react-navigation/native'
 import { Feather } from '@expo/vector-icons'
 import { Eye, Figma, Home, Product, Settings } from '~/screen'
+import { View } from 'react-native'
 import {
   useFonts,
   Montserrat_100Thin,
@@ -24,6 +25,8 @@ import {
   Montserrat_900Black_Italic,
 } from '@expo-google-fonts/montserrat'
 import AppLoading from 'expo-app-loading'
+import tw from '~/lib/tailwind'
+import { LinearGradient } from 'expo-linear-gradient'
 
 const tabScreens = [
   { name: 'Home', Component: Home, icon: 'home' },
@@ -68,23 +71,33 @@ const App = () => {
           tabBarShowLabel: false,
           tabBarStyle: {
             position: 'absolute',
-            bottom: 20,
-            backgroundColor: '#F9FAFB',
-            marginHorizontal: 20,
-            height: 60,
-            borderRadius: 10,
-            borderWidth: 1,
-            borderColor: '#E5E7EB',
+            backgroundColor: '#E5E7EB',
+            height: 80,
+            paddingBottom: 20,
+            borderTopWidth: 0,
           },
         }}
       >
-        {tabScreens.map(({ name, Component, icon }) => (
+        {tabScreens.map(({ name, Component, icon }, index) => (
           <Tab.Screen
             key={name}
             name={name}
             component={Component}
             options={{
               tabBarIcon: ({ focused }) => {
+                if (index === ~~(tabScreens.length / 2)) {
+                  return (
+                    <View style={tw('bg-gray-200 p-3 rounded-full -mt-10')}>
+                      <LinearGradient
+                        colors={focused ? ['#FF8599', '#FF5C77'] : ['#FF5C77', '#FF8599']}
+                        style={tw('p-5 rounded-full')}
+                      >
+                        <Feather name={icon} size={30} color='#FFF' />
+                      </LinearGradient>
+                    </View>
+                  )
+                }
+
                 return <Feather name={icon} size={24} color={focused ? '#FF3355' : '#6B7280'} />
               },
             }}
