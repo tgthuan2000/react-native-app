@@ -5,7 +5,7 @@ import tw from '~/lib/tailwind'
 const Figma = () => {
   return (
     <View style={tw('flex-1 bg-white p-2')}>
-      <ScrollView>
+      <ScrollView style={tw('mt-5')}>
         {Array.from(Array(20)).map((item, index) => (
           <Card key={index} className={index !== 20 && 'mb-4'} />
         ))}

@@ -62,7 +62,7 @@ const App = () => {
   return (
     <NavigationContainer>
       <Tab.Navigator
-        initialRouteName='Eye'
+        initialRouteName='Settings'
         screenOptions={{
           headerShown: false,
           tabBarShowLabel: false,

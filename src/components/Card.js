@@ -4,7 +4,7 @@ import { BadgeNumber } from '.'
 
 const Card = ({ className = '' }) => {
   return (
-    <View style={tw('flex-row border border-gray-100 rounded-lg h-24', className)}>
+    <View style={tw('flex-row border border-gray-100 rounded-lg h-28', className)}>
       <View style={tw('flex-1')}>
         <Image
           style={tw('w-full h-full rounded-tl-lg rounded-bl-lg')}

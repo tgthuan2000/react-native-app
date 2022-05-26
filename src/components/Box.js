@@ -5,7 +5,7 @@ import tw from '~/lib/tailwind'
 const Box = ({ className = '' }) => {
   return (
     <View style={tw('rounded-xl', className)}>
-      <View style={tw('h-34 mb-1')}>
+      <View style={tw('h-40 mb-1')}>
         <Image
           style={tw('w-full h-full rounded-xl')}
           source={{ uri: 'https://wallpaperaccess.com/full/2309745.jpg' }}
