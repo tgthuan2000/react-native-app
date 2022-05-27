@@ -74,6 +74,7 @@ const Home = () => {
             />
           </BodyBadge>
         </View>
+        {/* Recently */}
         <View style={tw('mt-10 px-3')}>
           <View style={tw('flex-row justify-between items-center')}>
             <Text style={tw('font-mont-bold text-base text-gray-900')}>Hoạt động gần đây</Text>
