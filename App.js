@@ -69,13 +69,6 @@ const App = () => {
         screenOptions={{
           headerShown: false,
           tabBarShowLabel: false,
-          tabBarStyle: {
-            position: 'absolute',
-            backgroundColor: '#E5E7EB',
-            height: 80,
-            paddingBottom: 20,
-            borderTopWidth: 0,
-          },
         }}
       >
         {tabScreens.map(({ name, Component, icon }, index) => (
@@ -85,19 +78,6 @@ const App = () => {
             component={Component}
             options={{
               tabBarIcon: ({ focused }) => {
-                if (index === ~~(tabScreens.length / 2)) {
-                  return (
-                    <View style={tw('bg-gray-200 p-3 rounded-full -mt-10')}>
-                      <LinearGradient
-                        colors={focused ? ['#FF8599', '#FF5C77'] : ['#FF5C77', '#FF8599']}
-                        style={tw('p-5 rounded-full')}
-                      >
-                        <Feather name={icon} size={30} color='#FFF' />
-                      </LinearGradient>
-                    </View>
-                  )
-                }
-
                 return <Feather name={icon} size={24} color={focused ? '#FF3355' : '#6B7280'} />
               },
             }}

@@ -10,9 +10,9 @@ const Button = ({ onPress, children = 'Button', style }) => {
         colors={['#FF8599', '#FF3355']}
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 1 }}
-        style={tw('p-3 rounded-lg text-center', { letterSpacing: 1.1 })}
+        style={tw('p-3 rounded-lg', { letterSpacing: 1.1 })}
       >
-        <Text style={tw('uppercase text-white font-mont-extraBold')}>{children}</Text>
+        <Text style={tw('uppercase text-white font-mont-extraBold text-center')}>{children}</Text>
       </LinearGradient>
     </TouchableOpacity>
   )
