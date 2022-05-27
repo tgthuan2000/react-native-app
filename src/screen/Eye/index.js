@@ -4,8 +4,8 @@ import tw from '~/lib/tailwind'
 
 const Eye = () => {
   return (
-    <View style={tw('flex-1 bg-white p-2')}>
-      <ScrollView style={tw('mt-7')} showsVerticalScrollIndicator={false} showsHorizontalScrollIndicator={false}>
+    <View style={tw('flex-1 bg-white')}>
+      <ScrollView showsVerticalScrollIndicator={false} showsHorizontalScrollIndicator={false}>
         {Array.from(Array(20)).map((item, index) => (
           <SmallCard key={index} className={index !== 20 && 'mb-4'} />
         ))}

@@ -24,11 +24,13 @@ import {
   Montserrat_900Black_Italic,
 } from '@expo-google-fonts/montserrat'
 import AppLoading from 'expo-app-loading'
+import { View } from 'react-native'
+import tw from '~/lib/tailwind'
 
 const tabScreens = [
-  { name: 'Home', Component: Home, icon: 'home' },
   { name: 'Product', Component: Product, icon: 'droplet' },
   { name: 'Settings', Component: Settings, icon: 'settings' },
+  { name: 'Home', Component: Home, icon: 'home' },
   { name: 'Eye', Component: Eye, icon: 'eye' },
   { name: 'Figma', Component: Figma, icon: 'figma' },
 ]
@@ -66,6 +68,8 @@ const App = () => {
         screenOptions={{
           headerShown: false,
           tabBarShowLabel: false,
+          // headerStatusBarHeight: -20,
+          // headerTintColor: 'transparent',
         }}
       >
         {tabScreens.map(({ name, Component, icon }, index) => (
@@ -75,6 +79,18 @@ const App = () => {
             component={Component}
             options={{
               tabBarIcon: ({ focused }) => {
+                if (index === ~~(tabScreens.length / 2)) {
+                  return (
+                    <View
+                      style={tw(
+                        'absolute -top-8 h-16 w-16 items-center justify-center rounded-full',
+                        focused ? 'bg-radical-red-400' : 'bg-radical-red-300'
+                      )}
+                    >
+                      <Feather name={icon} size={24} color='#fff' />
+                    </View>
+                  )
+                }
                 return <Feather name={icon} size={24} color={focused ? '#FF3355' : '#6B7280'} />
               },
             }}
