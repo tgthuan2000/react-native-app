@@ -1,6 +1,6 @@
-import { BadgeNumber } from '.'
 import { Text, View, Image } from 'react-native'
 import tw from '~/lib/tailwind'
+import BadgeNumber from './BadgeNumber'
 
 const Box = ({ className = '' }) => {
   return (
@@ -9,6 +9,7 @@ const Box = ({ className = '' }) => {
         <Image
           style={tw('w-full h-full rounded-xl')}
           source={{ uri: 'https://wallpaperaccess.com/full/2309745.jpg' }}
+          resizeMode='cover'
         />
       </View>
       <View style={tw('flex-row items-center justify-between')}>
@@ -22,6 +23,7 @@ const Box = ({ className = '' }) => {
               key={index}
               style={tw('h-8 w-8 -ml-4 rounded-full border-2 border-white')}
               source={{ uri: 'https://wallpaperaccess.com/full/2309745.jpg' }}
+              resizeMode='cover'
             />
           ))}
           <View style={tw('-ml-4')}>

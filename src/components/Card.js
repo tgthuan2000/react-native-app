@@ -1,6 +1,6 @@
 import { View, Image, Text } from 'react-native'
 import tw from '~/lib/tailwind'
-import { BadgeNumber } from '.'
+import BadgeNumber from './BadgeNumber'
 
 const Card = ({ className = '' }) => {
   return (
@@ -9,6 +9,7 @@ const Card = ({ className = '' }) => {
         <Image
           style={tw('w-full h-full rounded-tl-lg rounded-bl-lg')}
           source={{ uri: 'https://wallpaperaccess.com/full/2309745.jpg' }}
+          resizeMode='cover'
         />
       </View>
       <View style={tw('h-full justify-between px-4 py-2 flex-2 rounded-tr-lg rounded-br-lg')}>

@@ -2,7 +2,6 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { NavigationContainer } from '@react-navigation/native'
 import { Feather } from '@expo/vector-icons'
 import { Eye, Figma, Home, Product, Settings } from '~/screen'
-import { View } from 'react-native'
 import {
   useFonts,
   Montserrat_100Thin,
@@ -25,8 +24,6 @@ import {
   Montserrat_900Black_Italic,
 } from '@expo-google-fonts/montserrat'
 import AppLoading from 'expo-app-loading'
-import tw from '~/lib/tailwind'
-import { LinearGradient } from 'expo-linear-gradient'
 
 const tabScreens = [
   { name: 'Home', Component: Home, icon: 'home' },
@@ -65,7 +62,7 @@ const App = () => {
   return (
     <NavigationContainer>
       <Tab.Navigator
-        initialRouteName='Settings'
+        initialRouteName='Home'
         screenOptions={{
           headerShown: false,
           tabBarShowLabel: false,
