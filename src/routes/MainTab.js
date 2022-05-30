@@ -18,7 +18,7 @@ const tabScreens = [
 const MainTab = () => {
   return (
     <BottomTab.Navigator
-      initialRouteName='Home'
+      initialRouteName='Product'
       screenOptions={{
         headerShown: false,
         tabBarShowLabel: false,

@@ -1,9 +1,9 @@
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
 import { Eye, List, Product, Settings } from '~/screen'
-import 'react-native-gesture-handler'
-import { Text, View } from 'react-native'
+import { Text, View, StatusBar } from 'react-native'
 import tw from '~/lib/tailwind'
 import { LinearGradient } from 'expo-linear-gradient'
+import 'react-native-gesture-handler'
 
 const TopTab = createMaterialTopTabNavigator()
 
@@ -16,7 +16,8 @@ const drawTabScreens = [
 
 const DrawTab = () => {
   return (
-    <View>
+    <View style={tw('flex-1')}>
+      <StatusBar backgroundColor='#FF3355' />
       <LinearGradient colors={['#FF3355', '#FF8599']} style={tw('p-5')}>
         <Text style={tw('font-mont-semiBold text-white text-lg')}>Themes store</Text>
       </LinearGradient>

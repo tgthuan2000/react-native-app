@@ -1,6 +1,7 @@
 import { LinearGradient } from 'expo-linear-gradient'
 import tw from '~/lib/tailwind'
 import { View, Image, Text } from 'react-native'
+import { IMAGE } from '~/constants/image'
 
 const SmallCard = ({ className = '' }) => {
   return (
@@ -11,11 +12,7 @@ const SmallCard = ({ className = '' }) => {
       style={tw('p-3 flex-row rounded-lg justify-between', className)}
     >
       <View style={tw('flex-shrink-0')}>
-        <Image
-          resizeMode='cover'
-          source={{ uri: 'https://wallpaperaccess.com/full/2309745.jpg' }}
-          style={tw('w-11 h-11 rounded-full')}
-        />
+        <Image resizeMode='cover' source={{ uri: IMAGE.USER }} style={tw('w-11 h-11 rounded-full')} />
       </View>
       <View style={tw('flex-1 justify-between px-3')}>
         <Text style={tw('text-white font-mont-semiBold text-sm')}>Hibe Neted</Text>

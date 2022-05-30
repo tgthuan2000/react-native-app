@@ -3,21 +3,22 @@ import tw from '~/lib/tailwind'
 import { height } from '~/constants/theme'
 import { SmallCard } from '~/components'
 import { WaveLayout } from '~/Layout'
+import { IMAGE } from '~/constants/image'
 
 const bodyBadges = [
   {
-    image: require('../../../assets/icons/arrow-up.png'),
+    image: require('~assets/icons/arrow-up.png'),
     navigate: { screen: 'Loan' },
   },
   {
-    image: require('../../../assets/icons/arrow-down.png'),
+    image: require('~assets/icons/arrow-down.png'),
   },
   {
-    image: require('../../../assets/icons/sort.png'),
+    image: require('~assets/icons/sort.png'),
     navigate: { screen: 'Statistic' },
   },
   {
-    image: require('../../../assets/icons/pyramid-chart.png'),
+    image: require('~assets/icons/pyramid-chart.png'),
   },
 ]
 
@@ -33,20 +34,22 @@ const Home = ({ navigation }) => {
         <View style={tw('flex-row')}>
           <TouchableOpacity>
             <HeaderBadge>
+              <Image source={require('~assets/icons/bell.png')} style={tw('w-6 h-6')} resizeMode='cover' />
+            </HeaderBadge>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('Option')
+            }}
+          >
+            <HeaderBadge className='ml-2'>
               <Image
-                source={require('../../../assets/icons/bell.png')}
-                style={{ width: 24, height: 24 }}
+                style={tw('h-full w-full rounded-[20px] bg-white')}
+                source={{ uri: IMAGE.USER }}
                 resizeMode='cover'
               />
             </HeaderBadge>
           </TouchableOpacity>
-          <HeaderBadge className='ml-2'>
-            <Image
-              style={tw('h-full w-full rounded-[20px] bg-white')}
-              source={{ uri: 'https://wallpaperaccess.com/full/2309745.jpg' }}
-              resizeMode='cover'
-            />
-          </HeaderBadge>
         </View>
       </View>
       {/* Body */}
