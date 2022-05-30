@@ -39,7 +39,7 @@ const MainTab = () => {
                     colors={focused ? ['#FF3355', '#FF8599'] : ['#FFC2CC', '#FFC2CC']}
                     style={tw('absolute -top-8 h-16 w-16 items-center justify-center rounded-full')}
                   >
-                    <Feather name={icon} size={24} color='#fff' />
+                    <Feather name={icon} size={30} color='#fff' />
                   </LinearGradient>
                 )
               }

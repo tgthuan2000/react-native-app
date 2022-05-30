@@ -1,7 +1,6 @@
 import { ScrollView, View, Text, Image, TouchableOpacity } from 'react-native'
 import tw from '~/lib/tailwind'
 import { height } from '~/constants/theme'
-import { MaterialCommunityIcons } from '@expo/vector-icons'
 import { SmallCard } from '~/components'
 import { WaveLayout } from '~/Layout'
 
@@ -34,7 +33,11 @@ const Home = ({ navigation }) => {
         <View style={tw('flex-row')}>
           <TouchableOpacity>
             <HeaderBadge>
-              <MaterialCommunityIcons name='bell-ring' size={20} color='#374151' />
+              <Image
+                source={require('../../../assets/icons/bell.png')}
+                style={{ width: 24, height: 24 }}
+                resizeMode='cover'
+              />
             </HeaderBadge>
           </TouchableOpacity>
           <HeaderBadge className='ml-2'>
