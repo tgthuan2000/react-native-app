@@ -1,7 +1,5 @@
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { createStackNavigator } from '@react-navigation/stack'
 import { NavigationContainer } from '@react-navigation/native'
-import { Feather } from '@expo/vector-icons'
-import { Eye, Figma, Home, Product, Settings } from '~/screen'
 import {
   useFonts,
   Montserrat_100Thin,
@@ -24,18 +22,10 @@ import {
   Montserrat_900Black_Italic,
 } from '@expo-google-fonts/montserrat'
 import AppLoading from 'expo-app-loading'
-import { View } from 'react-native'
-import tw from '~/lib/tailwind'
+import { HomeStack, MainTab } from '~/routes'
+import 'react-native-gesture-handler'
 
-const tabScreens = [
-  { name: 'Product', Component: Product, icon: 'droplet' },
-  { name: 'Settings', Component: Settings, icon: 'settings' },
-  { name: 'Home', Component: Home, icon: 'home' },
-  { name: 'Eye', Component: Eye, icon: 'eye' },
-  { name: 'Figma', Component: Figma, icon: 'figma' },
-]
-
-const Tab = createBottomTabNavigator()
+const Stack = createStackNavigator()
 
 const App = () => {
   const [loadedFonts] = useFonts({
@@ -63,40 +53,16 @@ const App = () => {
 
   return (
     <NavigationContainer>
-      <Tab.Navigator
-        initialRouteName='Home'
+      <Stack.Navigator
+        initialRouteName='MainTab'
         screenOptions={{
           headerShown: false,
           tabBarShowLabel: false,
-          // headerStatusBarHeight: -20,
-          // headerTintColor: 'transparent',
         }}
       >
-        {tabScreens.map(({ name, Component, icon }, index) => (
-          <Tab.Screen
-            key={name}
-            name={name}
-            component={Component}
-            options={{
-              tabBarIcon: ({ focused }) => {
-                if (index === ~~(tabScreens.length / 2)) {
-                  return (
-                    <View
-                      style={tw(
-                        'absolute -top-8 h-16 w-16 items-center justify-center rounded-full',
-                        focused ? 'bg-radical-red-400' : 'bg-radical-red-300'
-                      )}
-                    >
-                      <Feather name={icon} size={24} color='#fff' />
-                    </View>
-                  )
-                }
-                return <Feather name={icon} size={24} color={focused ? '#FF3355' : '#6B7280'} />
-              },
-            }}
-          />
-        ))}
-      </Tab.Navigator>
+        <Stack.Screen name='MainTab' component={MainTab} />
+        <Stack.Screen name='HomeStack' component={HomeStack} />
+      </Stack.Navigator>
     </NavigationContainer>
   )
 }

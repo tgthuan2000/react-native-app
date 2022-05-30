@@ -2,7 +2,7 @@ import { ScrollView, View } from 'react-native'
 import { Card } from '~/components'
 import tw from '~/lib/tailwind'
 
-const Figma = () => {
+const List = () => {
   return (
     <View style={tw('flex-1 bg-white')}>
       <ScrollView showsVerticalScrollIndicator={false} showsHorizontalScrollIndicator={false}>
@@ -14,4 +14,4 @@ const Figma = () => {
   )
 }
 
-export default Figma
+export default List
